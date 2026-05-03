@@ -79,7 +79,7 @@ const searchInput = document.querySelector("#toolSearch");
 const categoryFilters = document.querySelector("#categoryFilters");
 const installButton = document.querySelector("#installButton");
 
-let activeCategory = "All";
+let activeCategory = "Agent Tools";
 let deferredInstallPrompt = null;
 
 function getAllCategories() {
@@ -153,6 +153,7 @@ function renderSections() {
         link.style.pointerEvents = "none";
         link.style.opacity = "0.62";
       } else {
+        link.textContent = "Open";
         link.href = tool.url;
         link.setAttribute("aria-label", `Open ${tool.name}`);
       }
