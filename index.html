@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07101f" />
+  <meta name="description" content="Blue Lily Agent Hub gives agents fast access to documents, apps and daily tools from any device." />
+  <title>Blue Lily Agent Hub</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow-one"></div>
+  <div class="bg-glow bg-glow-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#agent-tools" aria-label="Blue Lily Agent Hub home">
+        <img src="assets_logo_transparent.png" alt="Blue Lily Properties" class="brand-logo" />
+        <span class="brand-copy">
+          <strong>Blue Lily</strong>
+          <small>Agent Hub</small>
+        </span>
+      </a>
+      <button id="installButton" class="install-button" type="button" hidden>Install App</button>
+    </header>
+
+    <section class="control-section" aria-label="Search and category filters">
+      <div class="search-wrap">
+        <label for="toolSearch">Search tools</label>
+        <input id="toolSearch" type="search" placeholder="Search PropCTRL, TVA, CMA, Bond, Photo..." autocomplete="off" />
+      </div>
+      <div id="categoryFilters" class="category-filters" aria-label="Tool categories"></div>
+    </section>
+
+    <section id="toolSections" class="sections-wrap" aria-live="polite"></section>
+  </main>
+
+  <template id="sectionTemplate">
+    <section class="tool-section">
+      <div class="section-heading-row">
+        <div>
+          <p class="section-kicker"></p>
+          <h2 class="section-heading"></h2>
+        </div>
+        <span class="section-count"></span>
+      </div>
+      <div class="tool-grid"></div>
+    </section>
+  </template>
+
+  <template id="toolTemplate">
+    <article class="tool-card">
+      <div class="tool-body">
+        <h3></h3>
+        <p></p>
+      </div>
+      <a class="tool-button" target="_blank" rel="noopener noreferrer">Open Tool</a>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
