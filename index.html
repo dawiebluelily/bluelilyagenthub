@@ -1,50 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b16" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#061321" />
   <title>Blue Lily Agent Hub</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="assets/android-chrome-192x192.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="stylesheet" href="styles.css?v=20260503-fontfix-4" />
+  <link rel="icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page">
-    <header class="topbar">
-      <img class="brand-logo" src="assets/blue-lily-logo.png" alt="Blue Lily Properties" />
-      <div class="brand-line">BLUE LILY PROPERTIES AGENT HUB</div>
+  <main class="page-shell">
+    <header class="hero-card" aria-label="Blue Lily Agent Hub">
+      <img class="brand-logo" src="assets/images/blue-lily-logo.png" alt="Blue Lily Properties logo" />
+      <div class="hero-copy">
+        <p class="brand-kicker">Blue Lily Properties</p>
+        <h1>Blue Lily Agent Hub</h1>
+        <p class="hero-subtitle">Fast access to agent tools, compliance resources, sales documents and rental documents.</p>
+      </div>
     </header>
 
-    <section class="search-panel">
-      <label for="searchInput">SEARCH TOOLS</label>
-      <div class="search-row">
-        <input id="searchInput" type="search" placeholder="Search PropCTRL, TVA, CMA, Bond, Photo..." autocomplete="off" />
-        <div class="filters" aria-label="Tool filters">
-          <button class="filter-btn" data-filter="all">All</button>
-          <button class="filter-btn active" data-filter="agent-tools">Agent Tools</button>
-          <button class="filter-btn disabled" data-filter="loading" disabled>More Blue Lily Sections Loading</button>
-        </div>
+    <section class="hub-section compact-section" aria-labelledby="agent-tools-title">
+      <div class="section-title-row">
+        <span class="section-pill">Section 1</span>
+        <h2 id="agent-tools-title">Agent Tools</h2>
+      </div>
+      <div class="button-grid agent-grid">
+        <a class="hub-button" href="https://online.propctrl.com/" target="_blank" rel="noopener">PropCTRL</a>
+        <a class="hub-button" href="https://app.thevirtualagent.co.za/Search/Criteria#tab_address_search" target="_blank" rel="noopener">Virtual Agent</a>
+        <a class="hub-button" href="https://portal.loom.co.za/app/home" target="_blank" rel="noopener">Loom</a>
+        <a class="hub-button" href="https://cmagenerator.netlify.app/" target="_blank" rel="noopener">CMA Builder</a>
+        <a class="hub-button" href="https://bondpaymentcalculator.netlify.app/" target="_blank" rel="noopener">Bond Calculator</a>
+        <a class="hub-button" href="https://bluephotoeditor.netlify.app/" target="_blank" rel="noopener">Photo Edits</a>
       </div>
     </section>
 
-    <section class="section-card">
-      <div class="section-top">
-        <div>
-          <p class="section-number">SECTION 01</p>
-          <h1>Agent Tools</h1>
-        </div>
-        <p id="itemCount" class="item-count">7 ITEMS</p>
+    <section class="hub-section compact-section compliance-section" aria-labelledby="compliance-title">
+      <div class="section-title-row">
+        <span class="section-pill">Section 2</span>
+        <h2 id="compliance-title">Compliance</h2>
       </div>
+      <div class="button-grid compliance-grid">
+        <a class="hub-button compliance-button" href="https://bluelilycompliance.netlify.app/" target="_blank" rel="noopener">Blue Lily<br />Compliance</a>
+      </div>
+    </section>
 
-      <div id="toolGrid" class="tool-grid"></div>
+    <section class="hub-section" aria-labelledby="sales-documents-title">
+      <div class="section-title-row">
+        <span class="section-pill">Section 3</span>
+        <h2 id="sales-documents-title">Sales Documents</h2>
+      </div>
+      <div class="button-grid sales-grid">
+        <a class="hub-button doc-button" href="assets/docs/01-otp.pdf" target="_blank" rel="noopener">1. OTP</a>
+        <a class="hub-button doc-button" href="assets/docs/02-ppra-mandatory-disclosure.pdf" target="_blank" rel="noopener">2. PPRA Mandatory Disclosure</a>
+        <a class="hub-button doc-button" href="assets/docs/03-purchaser-particulars.pdf" target="_blank" rel="noopener">3. Purchaser Particulars</a>
+        <a class="hub-button doc-button" href="assets/docs/04-sellers-particulars.pdf" target="_blank" rel="noopener">4. Sellers Particulars</a>
+        <a class="hub-button doc-button" href="assets/docs/05-commission-agreement.pdf" target="_blank" rel="noopener">5. Commission Agreement</a>
+        <a class="hub-button doc-button" href="assets/docs/06-additional-conditions.pdf" target="_blank" rel="noopener">6. Additional Conditions</a>
+        <a class="hub-button doc-button" href="assets/docs/07-open-mandate.docx">7. Open Mandate</a>
+        <a class="hub-button doc-button" href="assets/docs/08-exclusive-mandate.docx">8. Exclusive Mandate</a>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="rental-documents-title">
+      <div class="section-title-row">
+        <span class="section-pill">Section 4</span>
+        <h2 id="rental-documents-title">Rental Documents</h2>
+      </div>
+      <div class="button-grid rental-grid">
+        <a class="hub-button doc-button" href="assets/docs/09-rental-mandate.pdf" target="_blank" rel="noopener">1. Mandate</a>
+        <a class="hub-button doc-button" href="assets/docs/10-rental-application.pdf" target="_blank" rel="noopener">2. Application</a>
+        <a class="hub-button doc-button" href="assets/docs/11-rental-mandatory-disclosure.pdf" target="_blank" rel="noopener">3. Mandatory Disclosure</a>
+      </div>
     </section>
   </main>
 
-  <script src="app.js?v=20260503-fontfix-4"></script>
+  <script src="app.js"></script>
 </body>
 </html>
