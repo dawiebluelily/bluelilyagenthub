@@ -83,8 +83,18 @@ function renderTools() {
 searchInput.addEventListener("input", renderTools);
 renderTools();
 
+
+
+
+// Deployment cache fix: remove old service workers and cached files.
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js").catch(() => {});
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    registrations.forEach((registration) => registration.unregister());
+  });
+}
+
+if ("caches" in window) {
+  caches.keys().then((cacheNames) => {
+    cacheNames.forEach((cacheName) => caches.delete(cacheName));
   });
 }

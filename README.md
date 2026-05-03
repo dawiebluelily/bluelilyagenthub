@@ -22,3 +22,14 @@ Upload all files to your GitHub repository root and redeploy on Netlify.
 ## Latest update
 
 - Top header changed to a single-line large heading: BLUE LILY PROPERTIES AGENT HUB.
+
+## Font deployment fix
+
+This version removes old service worker caching, adds CSS/JS cache-busting, and includes Netlify `_headers` so the font and heading changes show after deployment.
+
+After uploading, in Netlify use:
+Deploys > Trigger deploy > Clear cache and deploy site.
+
+If your browser still shows the old version, open the live site and press:
+- Mac: Cmd + Shift + R
+- Windows: Ctrl + F5

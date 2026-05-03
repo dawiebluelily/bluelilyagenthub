@@ -29,7 +29,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   background: transparent;
 }
 
@@ -60,12 +60,14 @@ input {
 }
 
 .brand-line {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  color: #ffffff;
-  white-space: nowrap;
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.055em !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
 }
 
 
@@ -173,7 +175,7 @@ input {
 
 h1 {
   margin: 0;
-  font-size: 34px;
+  font-size: 38px !important;
   line-height: 1;
   letter-spacing: -0.07em;
   font-weight: 900;
@@ -347,5 +349,43 @@ h1 {
   .brand-line {
     font-size: 15px;
     letter-spacing: 0.03em;
+  }
+}
+
+
+/* Final deployment-safe font overrides */
+.brand-line {
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.055em !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
+}
+
+.section-card h1 {
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: 38px !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.07em !important;
+}
+
+@media (max-width: 680px) {
+  .brand-line {
+    font-size: 21px !important;
+    letter-spacing: 0.035em !important;
+  }
+
+  .section-card h1 {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-line {
+    font-size: 16px !important;
+    letter-spacing: 0.025em !important;
   }
 }
