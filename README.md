@@ -1,32 +1,15 @@
-# Blue Lily Agent Hub
+# Blue Lily Agent Hub - Original Look Restored
 
-A responsive phone, tablet and laptop app for Blue Lily agents to access tools, documents and small apps.
+This package keeps the original dark Agent Hub layout and adds only the Compliance tool.
 
-## Current Tools
+## What changed
 
-- PropCTRL
-- TVA
-- Loom
-- CMA Builder
-- Bond Calculator
-- Photo Edits
+- Preserved the original app look from the screenshot.
+- Restored Blue Lily logo from the supplied original logo image.
+- Added Compliance as the 7th Agent Tool.
+- No loading screen.
+- No install tab.
 
-## How to deploy on GitHub + Netlify
+## Deploy
 
-1. Create a new GitHub repository.
-2. Upload all files in this folder to the repository.
-3. Connect the repository to Netlify.
-4. Use these Netlify settings:
-   - Build command: leave blank
-   - Publish directory: `/`
-5. Deploy.
-
-## How to add more tools
-
-Open `app.js` and add new tool cards inside the `toolSections` array.
-
-
-Version 4 updates:
-- Hero section removed.
-- Agent tools now load directly below the top bar.
-- Tool card blue icon blocks removed.
+Upload all files to your GitHub repository root and redeploy on Netlify.

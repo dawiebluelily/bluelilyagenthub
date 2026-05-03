@@ -1,63 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07101f" />
-  <meta name="description" content="Blue Lily Agent Hub gives agents fast access to documents, apps and daily tools from any device." />
+  <meta name="theme-color" content="#070b16" />
   <title>Blue Lily Agent Hub</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icon-192.png" />
-  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" href="assets/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-glow bg-glow-one"></div>
-  <div class="bg-glow bg-glow-two"></div>
-  <main class="app-shell">
+  <main class="page">
     <header class="topbar">
-      <a class="brand" href="#agent-tools" aria-label="Blue Lily Agent Hub home">
-        <img src="assets_logo_transparent.png" alt="Blue Lily Properties" class="brand-logo" />
-        <span class="brand-copy">
-          <strong>Blue Lily</strong>
-          <small>Agent Hub</small>
-        </span>
-      </a>
+      <img class="brand-logo" src="assets/blue-lily-logo.png" alt="Blue Lily Properties" />
+      <div class="brand-copy">
+        <div class="brand-title">BLUE LILY</div>
+        <div class="brand-subtitle">AGENT HUB</div>
+      </div>
     </header>
 
-    <section class="control-section" aria-label="Search and category filters">
-      <div class="search-wrap">
-        <label for="toolSearch">Search tools</label>
-        <input id="toolSearch" type="search" placeholder="Search PropCTRL, TVA, CMA, Bond, Photo..." autocomplete="off" />
-      </div>
-      <div id="categoryFilters" class="category-filters" aria-label="Tool categories"></div>
-    </section>
-
-    <section id="toolSections" class="sections-wrap" aria-live="polite"></section>
-  </main>
-
-  <template id="sectionTemplate">
-    <section class="tool-section">
-      <div class="section-heading-row">
-        <div>
-          <p class="section-kicker"></p>
-          <h2 class="section-heading"></h2>
+    <section class="search-panel">
+      <label for="searchInput">SEARCH TOOLS</label>
+      <div class="search-row">
+        <input id="searchInput" type="search" placeholder="Search PropCTRL, TVA, CMA, Bond, Photo..." autocomplete="off" />
+        <div class="filters" aria-label="Tool filters">
+          <button class="filter-btn" data-filter="all">All</button>
+          <button class="filter-btn active" data-filter="agent-tools">Agent Tools</button>
+          <button class="filter-btn disabled" data-filter="loading" disabled>More Blue Lily Sections Loading</button>
         </div>
-        <span class="section-count"></span>
       </div>
-      <div class="tool-grid"></div>
     </section>
-  </template>
 
-  <template id="toolTemplate">
-    <article class="tool-card">
-      <div class="tool-body">
-        <h3></h3>
-        <p></p>
+    <section class="section-card">
+      <div class="section-top">
+        <div>
+          <p class="section-number">SECTION 01</p>
+          <h1>Agent Tools</h1>
+        </div>
+        <p id="itemCount" class="item-count">7 ITEMS</p>
       </div>
-      <a class="tool-button" target="_blank" rel="noopener noreferrer">Open</a>
-    </article>
-  </template>
+
+      <div id="toolGrid" class="tool-grid"></div>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>
