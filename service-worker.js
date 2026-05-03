@@ -1,4 +1,4 @@
-const CACHE_NAME = "blue-lily-agent-hub-v6";
+const CACHE_NAME = "blue-lily-agent-hub-v7";
 const APP_FILES = [
   "./",
   "index.html",

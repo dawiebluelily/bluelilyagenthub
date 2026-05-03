@@ -77,10 +77,8 @@ const sectionTemplate = document.querySelector("#sectionTemplate");
 const toolTemplate = document.querySelector("#toolTemplate");
 const searchInput = document.querySelector("#toolSearch");
 const categoryFilters = document.querySelector("#categoryFilters");
-const installButton = document.querySelector("#installButton");
 
 let activeCategory = "Agent Tools";
-let deferredInstallPrompt = null;
 
 function getAllCategories() {
   return ["All", ...toolSections.map((section) => section.heading)];
@@ -172,20 +170,6 @@ function registerServiceWorker() {
     });
   }
 }
-
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  deferredInstallPrompt = event;
-  installButton.hidden = false;
-});
-
-installButton.addEventListener("click", async () => {
-  if (!deferredInstallPrompt) return;
-  deferredInstallPrompt.prompt();
-  await deferredInstallPrompt.userChoice;
-  deferredInstallPrompt = null;
-  installButton.hidden = true;
-});
 
 
 searchInput.addEventListener("input", renderSections);
